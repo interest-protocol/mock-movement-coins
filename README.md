@@ -2,20 +2,22 @@
 
 ## Package
 
-- id: 0x3485680de489f0a900bdc3bcf2ebb24e97f3a1c70daf7896521003836b77db49
-- type: 0x3485680de489f0a900bdc3bcf2ebb24e97f3a1c70daf7896521003836b77db49::usdc::USDC
+- id: 0x7c39fc21fd58548ac85b56915b5b614501358921b9e1ec4db26864d93890853e
+- type: 0x7c39fc21fd58548ac85b56915b5b614501358921b9e1ec4db26864d93890853e::usdc::USDC
 
 ## Metadata
 
-- id: 0x1d52f24c59cafd0fde1fefab4c01ea41cb17f6109e6d0c9ee917a88b8e22197f
-- type: 0x2::coin::CoinMetadata<0x3485680de489f0a900bdc3bcf2ebb24e97f3a1c70daf7896521003836b77db49::usdc::USDC>
+- id: 0x2b505b8c42009660e341f0bf5bd552de0efeb1ab0c328101170956108e0ab9ac
+- type: 0x2::coin::CoinMetadata<0x7c39fc21fd58548ac85b56915b5b614501358921b9e1ec4db26864d93890853e::usdc::USDC>
 - decimals: 6
 - name: USD Coin
 - symbol: USDC
 
-## Faucet
+## Treasury Cap
 
-It is a shared object that wraps the USDC supply.
+Anyone can call the `0x2::coin::mint` or `mint_and_transfer` function to mint coins.
 
-- id: 0x93fa7607a8f0a63b8bea2695c3682d4af3001687677f1bccf2dba21d433d6fce
-- type: 0x3485680de489f0a900bdc3bcf2ebb24e97f3a1c70daf7896521003836b77db49::usdc::Faucet
+Please check the Sui Framework coin module [here](https://github.com/MystenLabs/sui/blob/main/crates/sui-framework/packages/sui-framework/sources/coin.move).
+
+- id: 0xfd7af22e047dece7f65d6da60fffdeb603222b36895ee98f80fbd5a4223c71f0
+- type: 0x2::coin::TreasuryCap<0x7c39fc21fd58548ac85b56915b5b614501358921b9e1ec4db26864d93890853e::usdc::USDC>
