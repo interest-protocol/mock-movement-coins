@@ -1,5 +1,4 @@
-
-module usdc::usdc {
+module mock_tokens::usdc {
   use sui::coin;
   use sui::url::new_unsafe_from_bytes;
 
